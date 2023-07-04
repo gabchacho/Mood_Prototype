@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    
+    private Color color = Color.black;
+    public Color GetColor() { return color; }
+    public void SetColor(Color col) { color = col; }
 
     private bool isPaused;
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject loseScreen;
     [SerializeField] private GameObject winScreen;
-    [SerializeField] private CapsuleCollider2D playerCollider;
 
     private void Awake()
     {
@@ -29,9 +32,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenuUI.SetActive(false);
-        loseScreen.SetActive(false);
-        winScreen.SetActive(false);
+        //pauseMenuUI.SetActive(false);
+        //loseScreen.SetActive(false);
+        //winScreen.SetActive(false);
     }
 
     // Update is called once per frame
