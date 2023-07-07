@@ -1,7 +1,7 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
-
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -78,4 +78,83 @@ public class AudioManager : MonoBehaviour
 
         s.source.Stop();
     }
+
+    public void FadeOut(string musicname)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == musicname);
+
+        IEnumerator FadeO()
+        {
+            AudioSource fadingmusic = s.source;
+
+            while (fadingmusic.volume > 0)
+            {
+                fadingmusic.volume -= 0.001f;
+                yield return null;
+                //fadingmusic.Stop();
+            }
+        }
+
+        StartCoroutine(FadeO());
+    }
+
+    public void FadeIn(string musicname)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == musicname);
+
+        IEnumerator FadeI()
+        {
+            s.source.Play();
+            float volume = 0f;
+
+            do
+            {
+                s.source.volume = volume;
+                volume += 0.01f;
+                yield return null;
+            } while (s.source.volume <= s.volume);
+
+        }
+
+        StartCoroutine(FadeI());
+    }
+
+    /*private Sound sound;
+    public void Play(string name)
+    {
+        StopAllCoroutines();
+        if (sound != null) StartCoroutine(EndSound());
+
+        sound = Array.Find(sounds, s => s.name == name);
+        if (sound == null)
+        {
+            Debug.LogWarning("Music " + name + " not found.");
+            return;
+        }
+        StartCoroutine(StartSound());
+    }
+
+    private IEnumerator EndSound()
+    {
+        AudioSource oldSound = sound.source;
+        while (oldSound.volume > 0)
+        {
+            oldSound.volume -= 0.01f;
+            yield return null;
+        }
+        oldSound.Stop();
+    }
+
+    private IEnumerator StartSound()
+    {
+        sound.source.Play();
+        float volume = 0f;
+        do
+        {
+            sound.source.volume = volume;
+            volume += 0.01f;
+            yield return null;
+        } while (sound.source.volume <= sound.volume);
+    }
+    */
 }

@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Scribble
+  - Top
+  - Bottom
   layers:
   - Default
   - TransparentFX
@@ -43,4 +46,7 @@ TagManager:
     locked: 0
   - name: Top
     uniqueID: 950034339
+    locked: 0
+  - name: UI
+    uniqueID: 900650285
     locked: 0

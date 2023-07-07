@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 35a37ebe8c9829d4c88b0a9213315635
+guid: 1608a1024fb12384cbb89d57ad9e1be0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - scribble: {fileID: 6872782141726017706, guid: 48a3ce3fd0c848745a0541e7a1602456, type: 3}
-  - anim: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

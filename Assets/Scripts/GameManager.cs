@@ -5,11 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //public bool tester = false;
+
+    public List<GameObject> allShapes;
+
     public static GameManager instance;
     
-    private Color color = Color.black;
+    private Color color = Color.gray;
     public Color GetColor() { return color; }
     public void SetColor(Color col) { color = col; }
+
+    private int shapeCount = 0;
+    public void setShapeCount() {  shapeCount++; }
 
     private bool isPaused;
     [SerializeField] private GameObject pauseMenuUI;
@@ -32,7 +39,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.instance.Play("Heavy Rain");
+        //AudioManager.instance.Play("Heavy Rain");
+        AudioManager.instance.Play("Sad Music");
+
+        AudioManager.instance.FadeIn("Heavy Rain");
+        //AudioManager.instance.FadeIn("Sad Music");
+
         //pauseMenuUI.SetActive(false);
         //loseScreen.SetActive(false);
         //winScreen.SetActive(false);
@@ -55,6 +67,28 @@ public class GameManager : MonoBehaviour
             else
             {
                 ResumeGame();
+            }
+        }
+
+        /*foreach (GameObject go in allShapes) 
+        {
+            if (go.gameObject.GetComponent<Shape>().GetColored()) 
+            {
+                setShapeCount();
+            }            
+        }*/
+
+        if (shapeCount >= allShapes.Count / 1.3) 
+        {
+            //TODO: add fade out if time allows...
+            //StartCoroutine(FadeMixerGroup.StartFade(AudioMixer audioMixer, String exposedParameter, float duration, float targetVolume));
+
+            //AudioManager.instance.Stop("Heavy Rain");
+            AudioManager.instance.FadeOut("Heavy Rain");
+
+            if (!AudioManager.instance.CheckPlaying("Sad Music"))
+            {
+                AudioManager.instance.Play("Sad Music");
             }
         }
     }
