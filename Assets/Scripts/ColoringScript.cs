@@ -7,13 +7,16 @@ using UnityEngine;
 
 public class ColoringScript : MonoBehaviour
 {
-    [SerializeField] public Animator animator;
+    
     public Renderer rend;
-
+    //public Animator animator;
+    //private Animation anim;
     void Start()
     {
         rend = GetComponent<Renderer>();
         rend.enabled = false;
+       // anim = gameObject.GetComponent<Animation>();
+        
 
     }
     void Update()
@@ -21,21 +24,27 @@ public class ColoringScript : MonoBehaviour
 
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-        transform.position = mousePosition;
+        //transform.position = mousePosition;
 
         
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            rend.enabled = true;
+            transform.position = mousePosition;
             transform.gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.GetColor();
-            animator.SetBool("playing", true);
+            rend.enabled = true;
+
+            //anim.Play("Drawing"); 
+            //animator.SetBool("playing", true);
+            //await Task.Delay(1000);
+
+
         }
     if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             
             rend.enabled = false;
-            animator.SetBool("playing", false);
+            //animator.SetBool("playing", false);
             
         }
     }
