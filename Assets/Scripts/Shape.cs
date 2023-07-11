@@ -12,16 +12,28 @@ public class Shape : MonoBehaviour
 
     public ParticleSystem colorParticles;
 
+    private Animator anim;
+
     private void Start()
     {
         //scribble = GameObject.FindGameObjectWithTag("Scribble");
         colorParticles = FindObjectOfType<ParticleSystem>();
+
+        if (GetComponent<Animator>() != null) 
+        {
+            anim = GetComponent<Animator>();
+        }
     }
 
     private void Update()
     {
         var main = colorParticles.main;
         main.startColor = GameManager.instance.GetColor();
+
+        if (colored) 
+        {
+            SetAnims();
+        }
     }
 
     private void OnMouseDown()
@@ -96,6 +108,17 @@ public class Shape : MonoBehaviour
         else 
         {
             return false;
+        }
+    }
+
+    private void SetAnims() 
+    {
+        if (transform.tag == "Flower") 
+        {
+            for (int i = 0; i < gameObject.transform.childCount; i++)
+            {
+                transform.GetChild(i).GetComponent<Animator>().SetTrigger("Flower_Colored");
+            }
         }
     }
 
