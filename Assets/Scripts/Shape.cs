@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class Shape : MonoBehaviour
 {
-    private GameObject scribble;
-    //public Animator anim;
-
     private bool colored = false;
 
-    private float zVal = 0.0f;
     RaycastHit2D desiredHit;
 
     public bool GetColored() { return colored; }
 
     public ParticleSystem colorParticles;
 
+    private Animator anim;
+
     private void Start()
     {
         //scribble = GameObject.FindGameObjectWithTag("Scribble");
         colorParticles = FindObjectOfType<ParticleSystem>();
+
+        if (GetComponent<Animator>() != null) 
+        {
+            anim = GetComponent<Animator>();
+        }
     }
 
     private void Update()
@@ -27,32 +30,14 @@ public class Shape : MonoBehaviour
         var main = colorParticles.main;
         main.startColor = GameManager.instance.GetColor();
 
-        /*if (Input.GetMouseButtonDown(0)) 
+        if (colored) 
         {
-           
-        }*/
+            SetAnims();
+        }
     }
 
     private void OnMouseDown()
     {
-        /*if (gameObject.tag == "Top")
-        {
-            ColorIn();
-        }
-        else 
-        {
-            ColorIn();
-        }*/
-
-        /*RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-
-        if (hit.collider != null)
-        {
-            //Debug.Log("Target Position: " + hit.collider.gameObject.transform.position);
-            ColorIn();
-        }*/
-
-
         RaycastHit2D[] hits;
 
         hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), new Vector2(0, 0), 1f);
@@ -92,7 +77,7 @@ public class Shape : MonoBehaviour
             AudioManager.instance.Play("Coloring");
         }
 
-        if (transform.childCount > 0)
+        if (CheckParent())
         {
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
@@ -108,13 +93,33 @@ public class Shape : MonoBehaviour
             GetComponent<SpriteRenderer>().color = GameManager.instance.GetColor();
         }
 
-        //Instantiate(scribble);
-        //scribble.transform.position = transform.position;
-
-        //scribble.gameObject.GetComponent<Animator>().SetBool("playing", true);*/
-
-        //colorParticles.startColor = GameManager.instance.GetColor();
         colorParticles.Play();
         colorParticles.gameObject.transform.position = transform.position;
     }
+
+
+    private bool CheckParent() 
+    {
+
+        if (transform.childCount > 0)
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+    }
+
+    private void SetAnims() 
+    {
+        if (transform.tag == "Flower") 
+        {
+            for (int i = 0; i < gameObject.transform.childCount; i++)
+            {
+                transform.GetChild(i).GetComponent<Animator>().SetTrigger("Flower_Colored");
+            }
+        }
+    }
+
 }
