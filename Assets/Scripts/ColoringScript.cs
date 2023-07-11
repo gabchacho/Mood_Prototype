@@ -11,14 +11,12 @@ public class ColoringScript : MonoBehaviour
     void Start()
     {
        animator = GetComponent<Animator>();
-
     }
     void Update()
     {
 
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-        //transform.position = mousePosition;
         
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -28,10 +26,6 @@ public class ColoringScript : MonoBehaviour
             animator.SetTrigger("Draw");
         }
     }
-    
-   
-
-
 }
 
 

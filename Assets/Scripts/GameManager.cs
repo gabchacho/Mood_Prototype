@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    //public bool tester = false;
-
     public List<GameObject> allShapes;
 
     public static GameManager instance;
@@ -17,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     private int shapeCount = 0;
     public void setShapeCount() {  shapeCount++; }
+
+    private bool backGroundColor = false;
+    public bool GetBackGroundColor() { return backGroundColor; }
 
     private bool isPaused;
     [SerializeField] private GameObject pauseMenuUI;
@@ -39,11 +40,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //AudioManager.instance.Play("Heavy Rain");
         AudioManager.instance.Play("Sad Music");
-
         AudioManager.instance.FadeIn("Heavy Rain");
-        //AudioManager.instance.FadeIn("Sad Music");
 
         //pauseMenuUI.SetActive(false);
         //loseScreen.SetActive(false);
@@ -70,20 +68,10 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        /*foreach (GameObject go in allShapes) 
-        {
-            if (go.gameObject.GetComponent<Shape>().GetColored()) 
-            {
-                setShapeCount();
-            }            
-        }*/
-
         if (shapeCount >= allShapes.Count / 1.3) 
         {
-            //TODO: add fade out if time allows...
-            //StartCoroutine(FadeMixerGroup.StartFade(AudioMixer audioMixer, String exposedParameter, float duration, float targetVolume));
-
-            //AudioManager.instance.Stop("Heavy Rain");
+            backGroundColor = true;
+            
             AudioManager.instance.FadeOut("Heavy Rain");
 
             if (!AudioManager.instance.CheckPlaying("Sad Music"))

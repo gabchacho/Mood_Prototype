@@ -5,9 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Scribble
-  - Top
-  - Bottom
   - Flower
+  - Puff
+  - Sun
+  - Leaf
+  - Fruit
+  - Window
   layers:
   - Default
   - TransparentFX

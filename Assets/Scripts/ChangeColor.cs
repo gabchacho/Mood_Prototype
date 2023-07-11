@@ -17,8 +17,11 @@ public class ChangeColor : MonoBehaviour
 
     void Update()
     {
-        Color color = Color.Lerp(color1, color2, t);
-        t += Time.deltaTime / duration;
-        Camera.main.backgroundColor = color;
+        if (GameManager.instance.GetBackGroundColor()) 
+        {
+            Color color = Color.Lerp(color1, color2, t);
+            t += Time.deltaTime / duration;
+            Camera.main.backgroundColor = color;
+        }
     }
 }

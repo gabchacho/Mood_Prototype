@@ -16,7 +16,6 @@ public class Shape : MonoBehaviour
 
     private void Start()
     {
-        //scribble = GameObject.FindGameObjectWithTag("Scribble");
         colorParticles = FindObjectOfType<ParticleSystem>();
 
         if (GetComponent<Animator>() != null) 
@@ -65,10 +64,11 @@ public class Shape : MonoBehaviour
 
     private void ColorIn() 
     {
+        AudioManager.instance.Play("First Color");
+
         if (!colored)
         {
             colored = true;
-            AudioManager.instance.Play("First Color");
             GameManager.instance.setShapeCount();
         }
 
@@ -113,12 +113,31 @@ public class Shape : MonoBehaviour
 
     private void SetAnims() 
     {
-        if (transform.tag == "Flower") 
+        switch (transform.tag) 
         {
-            for (int i = 0; i < gameObject.transform.childCount; i++)
-            {
-                transform.GetChild(i).GetComponent<Animator>().SetTrigger("Flower_Colored");
-            }
+            case "Flower":
+                for (int i = 0; i < gameObject.transform.childCount; i++)
+                {
+                    transform.GetChild(i).GetComponent<Animator>().SetTrigger("Flower_Colored");
+                }
+                break;
+            case "Puff":
+                GetComponent<Animator>().SetTrigger("Puff_Colored");
+                break;
+            case "Sun":
+                GetComponent<Animator>().SetTrigger("Sun_Colored");
+                break;
+            case "Leaf":
+                GetComponent<Animator>().SetTrigger("Leaf_Colored");
+                break;
+            case "Fruit":
+                GetComponent<Animator>().SetTrigger("Fruit_Colored");
+                break;
+            case "Window":
+                GetComponent<Animator>().SetTrigger("Window_Colored");
+                break;
+            default:
+                break;
         }
     }
 
