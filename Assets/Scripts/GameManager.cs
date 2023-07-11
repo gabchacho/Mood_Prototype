@@ -19,11 +19,14 @@ public class GameManager : MonoBehaviour
     private bool backGroundColor = false;
     public bool GetBackGroundColor() { return backGroundColor; }
 
-    private bool isPaused;
+    private bool isPaused = false;
+    public bool GetPaused() { return isPaused; }
+
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject loseScreen;
     [SerializeField] private GameObject winScreen;
 
+    public bool tester = false;
     private void Awake()
     {
         if (instance == null)
@@ -43,7 +46,7 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.Play("Sad Music");
         AudioManager.instance.FadeIn("Heavy Rain");
 
-        //pauseMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(false);
         //loseScreen.SetActive(false);
         //winScreen.SetActive(false);
     }
@@ -68,15 +71,25 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (shapeCount >= allShapes.Count / 1.3) 
+        if (shapeCount >= allShapes.Count / 2) 
         {
             backGroundColor = true;
+        }
+
+        if (shapeCount >= allShapes.Count / 1.3 || tester) 
+        {
             
             AudioManager.instance.FadeOut("Heavy Rain");
+            AudioManager.instance.FadeOut("Sad Music");
 
-            if (!AudioManager.instance.CheckPlaying("Sad Music"))
+            if (!AudioManager.instance.CheckPlaying("Light Rain")) 
             {
-                AudioManager.instance.Play("Sad Music");
+                AudioManager.instance.FadeIn("Light Rain");
+            }
+
+            if (!AudioManager.instance.CheckPlaying("Humming"))
+            {
+                AudioManager.instance.FadeIn("Humming");
             }
         }
     }

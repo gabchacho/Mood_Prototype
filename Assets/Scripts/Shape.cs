@@ -37,27 +37,30 @@ public class Shape : MonoBehaviour
 
     private void OnMouseDown()
     {
-        RaycastHit2D[] hits;
-
-        hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), new Vector2(0, 0), 1f);
-
-        GameObject topObject = null;
-        foreach (RaycastHit2D hit in hits)
+        if (!GameManager.instance.GetPaused()) 
         {
-            if (topObject == null)
-            {
-                topObject = hit.collider.gameObject;
-            }
-            else if (hit.collider.gameObject.GetComponent<SpriteRenderer>().sortingOrder >
-                     topObject.GetComponent<SpriteRenderer>().sortingOrder)
-            {
-                topObject = hit.collider.gameObject;
-            }
-        }
+            RaycastHit2D[] hits;
 
-        if (topObject && topObject.TryGetComponent(out Shape shape))
-        {
-            shape.ColorIn();
+            hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), new Vector2(0, 0), 1f);
+
+            GameObject topObject = null;
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (topObject == null)
+                {
+                    topObject = hit.collider.gameObject;
+                }
+                else if (hit.collider.gameObject.GetComponent<SpriteRenderer>().sortingOrder >
+                         topObject.GetComponent<SpriteRenderer>().sortingOrder)
+                {
+                    topObject = hit.collider.gameObject;
+                }
+            }
+
+            if (topObject && topObject.TryGetComponent(out Shape shape))
+            {
+                shape.ColorIn();
+            }
         }
     }
 

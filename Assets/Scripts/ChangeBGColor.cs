@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChangeColor : MonoBehaviour
+public class ChangeBGColor : MonoBehaviour
 {
 
     [SerializeField]
@@ -11,8 +11,10 @@ public class ChangeColor : MonoBehaviour
 
     void Start()
     {
-        color1 = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-        color2 = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        color1 = new Color(0.5f, 0.5f, 0.5f, 1);
+        color2 = new Color(1, 0.92f, 0.016f, 1);
+
+        Camera.main.backgroundColor = color1;
     }
 
     void Update()

@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
 
             while (fadingmusic.volume > 0)
             {
-                fadingmusic.volume -= 0.001f;
+                fadingmusic.volume -= 0.00001f;
                 yield return null;
                 //fadingmusic.Stop();
             }
@@ -110,7 +110,7 @@ public class AudioManager : MonoBehaviour
             do
             {
                 s.source.volume = volume;
-                volume += 0.01f;
+                volume += 0.0001f;
                 yield return null;
             } while (s.source.volume <= s.volume);
 
