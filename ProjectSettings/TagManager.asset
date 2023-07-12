@@ -15,6 +15,7 @@ TagManager:
   - ChimneyTop
   - TreeTrunk
   - Swing
+  - Door
   layers:
   - Default
   - TransparentFX
