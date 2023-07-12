@@ -1306,6 +1306,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &449267686 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1799492772956630992, guid: d47444bd617125d4d95380f00bd0e8cf, type: 3}
+  m_PrefabInstance: {fileID: 3357048118609023817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &455183336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6127,7 +6132,7 @@ MonoBehaviour:
   - {fileID: 1958427901}
   - {fileID: 143847145}
   - {fileID: 839862958}
-  pageComplete: {fileID: 0}
+  pageComplete: {fileID: 449267686}
   pauseMenuUI: {fileID: 1017970027}
   winScreen: {fileID: 738662985}
   tester: 0
@@ -8278,6 +8283,10 @@ PrefabInstance:
     - target: {fileID: 3012168613756996491, guid: d47444bd617125d4d95380f00bd0e8cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801547525196658804, guid: d47444bd617125d4d95380f00bd0e8cf, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d47444bd617125d4d95380f00bd0e8cf, type: 3}
