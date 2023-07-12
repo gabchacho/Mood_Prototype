@@ -22,8 +22,11 @@ public class GameManager : MonoBehaviour
     private bool isPaused = false;
     public bool GetPaused() { return isPaused; }
 
+    private bool endGame = false;
+
+    public ParticleSystem pageComplete;
+
     [SerializeField] private GameObject pauseMenuUI;
-    [SerializeField] private GameObject loseScreen;
     [SerializeField] private GameObject winScreen;
 
     public bool tester = false;
@@ -47,8 +50,7 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.FadeIn("Heavy Rain");
 
         pauseMenuUI.SetActive(false);
-        //loseScreen.SetActive(false);
-        //winScreen.SetActive(false);
+        winScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -76,7 +78,7 @@ public class GameManager : MonoBehaviour
             backGroundColor = true;
         }
 
-        if (shapeCount >= allShapes.Count / 1.3 || tester) 
+        if (shapeCount >= allShapes.Count / 1.3) 
         {
             
             AudioManager.instance.FadeOut("Heavy Rain");
@@ -92,6 +94,13 @@ public class GameManager : MonoBehaviour
                 AudioManager.instance.FadeIn("Humming");
             }
         }
+
+        if ((shapeCount == allShapes.Count && !endGame) || tester) 
+        {
+            endGame = true;
+            EndGame();
+        }
+
     }
 
     public void PauseGame()
@@ -120,7 +129,23 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void EndGame() 
+    {
+        if (!AudioManager.instance.CheckPlaying("Shapes Colored")) 
+        {
+            AudioManager.instance.Play("Shapes Colored");
+        }
 
+        winScreen.SetActive(true);
+
+        winScreen.gameObject.GetComponent<Animator>().SetTrigger("Painting_Complete");
+
+        tester = false;
+    }
+    public void SpawnFirework() 
+    {
+        pageComplete.Play();
+    }
   
 
   

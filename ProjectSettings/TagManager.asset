@@ -11,6 +11,10 @@ TagManager:
   - Leaf
   - Fruit
   - Window
+  - House
+  - ChimneyTop
+  - TreeTrunk
+  - Swing
   layers:
   - Default
   - TransparentFX

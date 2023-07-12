@@ -124,7 +124,7 @@ public class Shape : MonoBehaviour
                     transform.GetChild(i).GetComponent<Animator>().SetTrigger("Flower_Colored");
                 }
                 break;
-            case "Puff":
+            /*case "Puff":
                 GetComponent<Animator>().SetTrigger("Puff_Colored");
                 break;
             case "Sun":
@@ -138,8 +138,12 @@ public class Shape : MonoBehaviour
                 break;
             case "Window":
                 GetComponent<Animator>().SetTrigger("Window_Colored");
-                break;
+                break;*/
             default:
+                if (anim != null) 
+                {
+                    GetComponent<Animator>().SetTrigger(transform.tag + "_Colored");
+                }
                 break;
         }
     }
