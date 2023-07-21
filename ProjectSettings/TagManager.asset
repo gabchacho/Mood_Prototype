@@ -56,6 +56,9 @@ TagManager:
   - name: Top
     uniqueID: 950034339
     locked: 0
+  - name: Stamp
+    uniqueID: 2004382437
+    locked: 0
   - name: UI
     uniqueID: 900650285
     locked: 0
