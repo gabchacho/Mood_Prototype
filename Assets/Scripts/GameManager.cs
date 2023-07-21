@@ -6,28 +6,26 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> allShapes;
-
+    public ParticleSystem pageComplete;
     public static GameManager instance;
-    
-    private Color color = Color.gray;
     public Color GetColor() { return color; }
     public void SetColor(Color col) { color = col; }
-
-    private int shapeCount = 0;
     public void setShapeCount() {  shapeCount++; }
-
-    private bool backGroundColor = false;
     public bool GetBackGroundColor() { return backGroundColor; }
-
-    private bool isPaused = false;
     public bool GetPaused() { return isPaused; }
+    public void SetPaused(bool pause) { isPaused = pause; }
+    public void SetStamp(GameObject st) { currStamp = st; }
+    public GameObject GetStamp() { return currStamp; }
 
+    private Color color = Color.gray;
     private bool endGame = false;
-
-    public ParticleSystem pageComplete;
-
+    private bool isPaused = false;
+    private bool backGroundColor = false;
+    private int shapeCount = 0;
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject winScreen;
+    private GameObject currStamp;
+    private GameObject newStamp;
 
     public bool tester = false;
     private void Awake()
@@ -101,6 +99,22 @@ public class GameManager : MonoBehaviour
             EndGame();
         }
 
+        if (currStamp != null) 
+        {
+            PauseGame();
+
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
+
+            newStamp = currStamp;
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                newStamp.gameObject.transform.position = mousePosition;
+                Instantiate(newStamp, newStamp.transform);
+            }
+        }
+
     }
 
     public void PauseGame()
@@ -146,8 +160,7 @@ public class GameManager : MonoBehaviour
     {
         pageComplete.Play();
     }
-  
 
-  
+
 
 }
