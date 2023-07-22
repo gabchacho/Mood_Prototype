@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public void SetPaused(bool pause) { isPaused = pause; }
     public void SetStamp(GameObject st) { currStamp = st; }
     public GameObject GetStamp() { return currStamp; }
+    //public GameObject complete;
 
     private Color color = Color.gray;
     private bool endGame = false;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject winScreen;
     private GameObject currStamp;
     private GameObject newStamp;
+    private int currScene = 0;
 
     public bool tester = false;
     private void Awake()
@@ -155,12 +157,29 @@ public class GameManager : MonoBehaviour
         winScreen.gameObject.GetComponent<Animator>().SetTrigger("Painting_Complete");
 
         tester = false;
+
+        StartCoroutine(LoadNextLevel());
     }
     public void SpawnFirework() 
     {
         pageComplete.Play();
     }
 
+    public IEnumerator LoadNextLevel() 
+    {
+        currScene++;
 
+        yield return new WaitForSeconds(5);
+
+        //if (SceneManager.GetSceneAt(currScene) != null)
+        //{
+            SceneManager.LoadScene(currScene);
+        //}
+        //else 
+        //{
+           // Reset();
+        //}
+
+    }
 
 }
