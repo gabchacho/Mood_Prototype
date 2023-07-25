@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject winScreen;
     private GameObject currStamp;
-    private GameObject newStamp;
     private int currScene = 0;
 
     public bool tester = false;
@@ -108,12 +107,10 @@ public class GameManager : MonoBehaviour
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
-            newStamp = currStamp;
-
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                newStamp.gameObject.transform.position = mousePosition;
-                Instantiate(newStamp, newStamp.transform);
+                var newStamp = Instantiate(currStamp);
+                newStamp.transform.position = mousePosition;
             }
         }
 
