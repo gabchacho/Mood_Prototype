@@ -102,17 +102,34 @@ public class GameManager : MonoBehaviour
 
         if (currStamp != null) 
         {
-            PauseGame();
+            PauseGame(); //note maybe better not to pause since it pauses the particle system, too
 
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+
+            //TODO: check if the mouseposition is outside certain bounds... if it isn't, stamp CAN be placed
+            Debug.Log(mousePosition);
+
+            //TODO: MAKE STAMPING WORK ONLY AFTER ALL SHAPES ARE COLORED IN...
+
+            if (mousePosition.x < -6 || mousePosition.x > 6 || mousePosition.y < -3 || mousePosition.y > 3)
             {
-                var newStamp = Instantiate(currStamp);
-                newStamp.transform.position = mousePosition;
             }
+            else 
+            {
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    var newStamp = Instantiate(currStamp);
+                    newStamp.gameObject.GetComponent<Collider2D>().enabled = false;
+                    newStamp.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+                    newStamp.transform.position = mousePosition;
+                }
+            }
+
+
         }
+
 
     }
 
