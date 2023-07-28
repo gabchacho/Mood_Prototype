@@ -53,20 +53,9 @@ public class GameManager : MonoBehaviour
     {
         sceneName = SceneManager.GetActiveScene().name;
 
-        switch (sceneName) 
-        {
-            case "First_Page":
-                currSong = "By Your Side";
-                AudioManager.instance.FadeIn("By Your Side");
-                break;
-            case "Second_Page":
-                currSong = "Sad Music";
-                AudioManager.instance.Play("Sad Music");
-                //AudioManager.instance.FadeIn("Heavy Rain");
-                break;
-            default:
-                return;
-        }
+        //chooses the song depending on scene
+        ChooseSong();
+        AudioManager.instance.FadeIn(currSong);
 
         pauseMenuUI.SetActive(false);
         winScreen.SetActive(false);
@@ -233,6 +222,22 @@ public class GameManager : MonoBehaviour
            // Reset();
         //}
 
+    }
+
+    public void ChooseSong() 
+    {
+        switch (sceneName)
+        {
+            case "First_Page":
+                currSong = "By Your Side";
+                break;
+            case "Second_Page":
+                currSong = "BYS Melancholy";
+                //AudioManager.instance.FadeIn("Heavy Rain");
+                break;
+            default:
+                return;
+        }
     }
 
 }
