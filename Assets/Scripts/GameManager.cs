@@ -28,6 +28,12 @@ public class GameManager : MonoBehaviour
     private GameObject currStamp;
     private int currScene = 0;
 
+    //SCENE VARIABLES
+    private string sceneName;
+    public string GetSceneName() { return sceneName; }
+
+    private string currSong;
+
     public bool tester = false;
     private void Awake()
     {
@@ -45,8 +51,22 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.instance.Play("Sad Music");
-        AudioManager.instance.FadeIn("Heavy Rain");
+        sceneName = SceneManager.GetActiveScene().name;
+
+        switch (sceneName) 
+        {
+            case "First_Page":
+                currSong = "By Your Side";
+                AudioManager.instance.FadeIn("By Your Side");
+                break;
+            case "Second_Page":
+                currSong = "Sad Music";
+                AudioManager.instance.Play("Sad Music");
+                //AudioManager.instance.FadeIn("Heavy Rain");
+                break;
+            default:
+                return;
+        }
 
         pauseMenuUI.SetActive(false);
         winScreen.SetActive(false);
@@ -79,8 +99,8 @@ public class GameManager : MonoBehaviour
 
         if (shapeCount >= allShapes.Count / 1.3) 
         {
-            
-            AudioManager.instance.FadeOut("Heavy Rain");
+
+            /*AudioManager.instance.FadeOut("Heavy Rain");
             AudioManager.instance.FadeOut("Sad Music");
 
             if (!AudioManager.instance.CheckPlaying("Light Rain")) 
@@ -91,12 +111,13 @@ public class GameManager : MonoBehaviour
             if (!AudioManager.instance.CheckPlaying("Humming"))
             {
                 AudioManager.instance.FadeIn("Humming");
-            }
+            }*/
         }
 
         if ((shapeCount == allShapes.Count && !endGame) || tester) 
         {
             endGame = true;
+
             EndGame();
         }
 
@@ -171,6 +192,24 @@ public class GameManager : MonoBehaviour
         winScreen.gameObject.GetComponent<Animator>().SetTrigger("Painting_Complete");
 
         tester = false;
+
+        /*if (AudioManager.instance.CheckPlaying(currSong))
+        {
+            AudioManager.instance.FadeOut(currSong);
+        }*/
+
+        /*foreach (Sound s in AudioManager.instance.sounds) 
+        {
+            if (AudioManager.instance.CheckPlaying(s.name)) 
+            {
+                AudioManager.instance.FadeOut(s.name);
+            }
+        }*/
+
+        if (AudioManager.instance.CheckPlaying(currSong))
+        {
+            AudioManager.instance.FadeOut(currSong);
+        }
 
         StartCoroutine(LoadNextLevel());
     }

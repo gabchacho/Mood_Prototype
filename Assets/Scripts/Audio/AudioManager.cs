@@ -87,12 +87,21 @@ public class AudioManager : MonoBehaviour
         {
             AudioSource fadingmusic = s.source;
 
-            while (fadingmusic.volume > 0)
+            /*while (fadingmusic.volume > 0)
             {
                 fadingmusic.volume -= 0.00001f;
                 yield return null;
-                //fadingmusic.Stop();
-            }
+                fadingmusic.Stop(); //fade out is not working as intended
+            }*/
+
+            do
+            {
+                fadingmusic.volume -= 0.0001f;
+                yield return null;
+                fadingmusic.Stop();
+            } while (fadingmusic.volume > 0);
+
+
         }
 
         StartCoroutine(FadeO());
