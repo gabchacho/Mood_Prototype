@@ -5490,106 +5490,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933459254}
   m_CullTransparentMesh: 1
---- !u!1 &1965423240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1965423241}
-  - component: {fileID: 1965423242}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1965423241
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965423240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1965423242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965423240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a697530cee2494eb2a1a7157b35d71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Coloring
-    clip: {fileID: 8300000, guid: 08409a51edbb8d741afd40b31315185e, type: 3}
-    volume: 0.75
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Heavy Rain
-    clip: {fileID: 8300000, guid: 374744c0c73f37f468b96d24b7361a59, type: 3}
-    volume: 0.2
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Sad Music
-    clip: {fileID: 8300000, guid: 31fee1310afa9ec4e865a1758646bd06, type: 3}
-    volume: 0.4
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: First Color
-    clip: {fileID: 8300000, guid: 31402b591a6177349b1406d956fba249, type: 3}
-    volume: 0.8
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Light Rain
-    clip: {fileID: 8300000, guid: b01b5a7147de5124d8fa87b765ba6e1c, type: 3}
-    volume: 0.2
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Humming
-    clip: {fileID: 8300000, guid: 3b9f27477504a114aa4ce31c7d16dbed, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Paint Select
-    clip: {fileID: 8300000, guid: 266abbadd97c3b2479174f645136419c, type: 3}
-    volume: 0.75
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Shapes Colored
-    clip: {fileID: 8300000, guid: 046c6a9ed7b35c94abfeabf664d96450, type: 3}
-    volume: 0.75
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: By Your Side
-    clip: {fileID: 8300000, guid: 3b539bc0d3044b64483aef1f1e03e03a, type: 3}
-    volume: 0.4
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  mix: {fileID: 24300002, guid: 2b48ca588a80c164fa808dee6c854657, type: 2}
 --- !u!1001 &1971192696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6079,6 +5979,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95f9162359a36204994798abb647d399, type: 3}
+--- !u!1001 &314315698503259525
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510220, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314315697112510221, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3a032f5b07eea224ebea731a395f1c28, type: 3}
 --- !u!1001 &589786681840177675
 PrefabInstance:
   m_ObjectHideFlags: 0
