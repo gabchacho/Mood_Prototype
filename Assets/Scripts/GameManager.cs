@@ -5,36 +5,49 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public List<GameObject> allShapes;
+    //GENERAL VARIABLES
     public ParticleSystem pageComplete;
     public static GameManager instance;
-    public Color GetColor() { return color; }
-    public void SetColor(Color col) { color = col; }
-    public void setShapeCount() {  shapeCount++; }
-    public bool GetBackGroundColor() { return backGroundColor; }
-    public bool GetPaused() { return isPaused; }
-    public void SetPaused(bool pause) { isPaused = pause; }
-    public void SetStamp(GameObject st) { currStamp = st; }
-    public GameObject GetStamp() { return currStamp; }
-    //public GameObject complete;
-
-    private Color color = Color.gray;
     private bool endGame = false;
-    private bool isPaused = false;
-    private bool backGroundColor = false;
-    private int shapeCount = 0;
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject winScreen;
-    private GameObject currStamp;
-    private int currScene = 0;
+    
+    //SOUND VARIABLES
+    private string currSong;
+    private string sfx1;
+
+    //COLOR VARIABLES
+    private Color color = Color.gray;
+    private bool backGroundColor = false;
+    public Color GetColor() { return color; }
+    public void SetColor(Color col) { color = col; }
+    public bool GetBackGroundColor() { return backGroundColor; }
+
+    //SHAPE VARIABLES
+    public List<GameObject> allShapes;
+    private int shapeCount = 0;
+    public void setShapeCount() { shapeCount++; }
+
+    //PAUSE VARIABLES
+    private bool isPaused = false;
+    public bool GetPaused() { return isPaused; }
+    public void SetPaused(bool pause) { isPaused = pause; }
 
     //SCENE VARIABLES
+    private int currScene = 0;
     private string sceneName;
     public string GetSceneName() { return sceneName; }
 
-    private string currSong;
+    //STAMP VARIABLES
+    private GameObject currStamp;
+    public void SetStamp(GameObject st) { currStamp = st; }
+    public GameObject GetStamp() { return currStamp; }
 
-    public bool tester = false;
+    //PARTICLES VARIABLES
+    public ParticleSystem colorParticles;
+    public ParticleSystem GetColorParticles() { return colorParticles; }
+
+    //public bool tester = false;
     private void Awake()
     {
         if (instance == null)
@@ -53,9 +66,14 @@ public class GameManager : MonoBehaviour
     {
         sceneName = SceneManager.GetActiveScene().name;
 
-        //chooses the song depending on scene
+        //chooses the song depending on scene + sets num of current scene
         ChooseSong();
         AudioManager.instance.FadeIn(currSong);
+
+        if (sfx1 != null) 
+        {
+            AudioManager.instance.FadeIn(sfx1);
+        }
 
         pauseMenuUI.SetActive(false);
         winScreen.SetActive(false);
@@ -103,7 +121,7 @@ public class GameManager : MonoBehaviour
             }*/
         }
 
-        if ((shapeCount == allShapes.Count && !endGame) || tester) 
+        if ((shapeCount == allShapes.Count && !endGame)) 
         {
             endGame = true;
 
@@ -176,28 +194,11 @@ public class GameManager : MonoBehaviour
             AudioManager.instance.Play("Shapes Colored");
         }
 
-        winScreen.SetActive(true);
-
-        winScreen.gameObject.GetComponent<Animator>().SetTrigger("Painting_Complete");
-
-        tester = false;
-
-        /*if (AudioManager.instance.CheckPlaying(currSong))
+        if (!sceneName.Equals("Title_Screen")) 
         {
-            AudioManager.instance.FadeOut(currSong);
-        }*/
+            winScreen.SetActive(true);
 
-        /*foreach (Sound s in AudioManager.instance.sounds) 
-        {
-            if (AudioManager.instance.CheckPlaying(s.name)) 
-            {
-                AudioManager.instance.FadeOut(s.name);
-            }
-        }*/
-
-        if (AudioManager.instance.CheckPlaying(currSong))
-        {
-            AudioManager.instance.FadeOut(currSong);
+            winScreen.gameObject.GetComponent<Animator>().SetTrigger("Painting_Complete");
         }
 
         StartCoroutine(LoadNextLevel());
@@ -210,28 +211,37 @@ public class GameManager : MonoBehaviour
     public IEnumerator LoadNextLevel() 
     {
         currScene++;
+        
+        yield return new WaitForSeconds(2);
 
-        yield return new WaitForSeconds(5);
+        if (AudioManager.instance.CheckPlaying(currSong))
+        {
+            AudioManager.instance.FadeOut(currSong);
+        }
 
-        //if (SceneManager.GetSceneAt(currScene) != null)
-        //{
-            SceneManager.LoadScene(currScene);
-        //}
-        //else 
-        //{
-           // Reset();
-        //}
+        if (AudioManager.instance.CheckPlaying(sfx1))
+        {
+            AudioManager.instance.FadeOut(sfx1);
+        }
 
+        SceneManager.LoadScene(currScene);
     }
 
     public void ChooseSong() 
     {
         switch (sceneName)
         {
+            case "Title_Screen":
+                currScene = 0;
+                currSong = "Title";
+                sfx1 = "Cicadas";
+                break;
             case "First_Page":
+                currScene = 1;
                 currSong = "By Your Side";
                 break;
             case "Second_Page":
+                currScene = 2;
                 currSong = "BYS Melancholy";
                 //AudioManager.instance.FadeIn("Heavy Rain");
                 break;

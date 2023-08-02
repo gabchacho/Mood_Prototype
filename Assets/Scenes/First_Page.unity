@@ -863,6 +863,11 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!198 &535951420 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5175299434548584936, guid: 39cd2f8f7274f1a469f5b8f7bf4785df, type: 3}
+  m_PrefabInstance: {fileID: 3864437498301098054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &560769799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2947452920283984566, guid: c1bfef855b085f347bd940c2cbb0b5d3, type: 3}
@@ -3927,6 +3932,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115fc71406665e64fa51764eb2f068af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageComplete: {fileID: 449267686}
+  pauseMenuUI: {fileID: 1017970027}
+  winScreen: {fileID: 738662985}
   allShapes:
   - {fileID: 1720422907}
   - {fileID: 1656165698}
@@ -3947,10 +3955,7 @@ MonoBehaviour:
   - {fileID: 476659189}
   - {fileID: 1407863347}
   - {fileID: 752936577}
-  pageComplete: {fileID: 449267686}
-  pauseMenuUI: {fileID: 1017970027}
-  winScreen: {fileID: 738662985}
-  tester: 0
+  colorParticles: {fileID: 535951420}
 --- !u!4 &1605678165
 Transform:
   m_ObjectHideFlags: 0

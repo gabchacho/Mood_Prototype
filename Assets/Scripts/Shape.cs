@@ -16,7 +16,9 @@ public class Shape : MonoBehaviour
 
     private void Start()
     {
-        colorParticles = FindObjectOfType<ParticleSystem>();
+        
+         colorParticles = GameManager.instance.GetColorParticles();
+      
 
         if (GetComponent<Animator>() != null) 
         {

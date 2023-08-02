@@ -47,7 +47,7 @@ MonoBehaviour:
   sounds:
   - name: Coloring
     clip: {fileID: 8300000, guid: 08409a51edbb8d741afd40b31315185e, type: 3}
-    volume: 0.75
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: First Color
     clip: {fileID: 8300000, guid: 31402b591a6177349b1406d956fba249, type: 3}
-    volume: 0.8
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -83,19 +83,31 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Paint Select
     clip: {fileID: 8300000, guid: 266abbadd97c3b2479174f645136419c, type: 3}
-    volume: 0.75
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Shapes Colored
     clip: {fileID: 8300000, guid: 046c6a9ed7b35c94abfeabf664d96450, type: 3}
-    volume: 0.75
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: By Your Side
     clip: {fileID: 8300000, guid: 3b539bc0d3044b64483aef1f1e03e03a, type: 3}
     volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Title
+    clip: {fileID: 8300000, guid: c26cfd1e2907cf64c8440d82424450c0, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Cicadas
+    clip: {fileID: 8300000, guid: 4cb0caa8f0bec554dace986d000beadd, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}

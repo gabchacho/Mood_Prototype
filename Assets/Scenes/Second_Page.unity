@@ -1303,7 +1303,7 @@ Transform:
   - {fileID: 1143657999}
   - {fileID: 399786391}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &725097300
 GameObject:
@@ -1401,7 +1401,7 @@ RectTransform:
   - {fileID: 1017970028}
   - {fileID: 738662986}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2514,7 +2514,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1143657999 stripped
 Transform:
@@ -3588,7 +3588,7 @@ Transform:
   - {fileID: 1895693873}
   - {fileID: 1997769123}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1435494004
 PrefabInstance:
@@ -4001,7 +4001,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1505746503
 PrefabInstance:
@@ -4110,7 +4110,7 @@ Transform:
   - {fileID: 955208200}
   - {fileID: 1800751884}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1564704658
 PrefabInstance:
@@ -4208,6 +4208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115fc71406665e64fa51764eb2f068af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageComplete: {fileID: 449267686}
+  pauseMenuUI: {fileID: 1017970027}
+  winScreen: {fileID: 738662985}
   allShapes:
   - {fileID: 1250652942}
   - {fileID: 1287940003}
@@ -4244,10 +4247,7 @@ MonoBehaviour:
   - {fileID: 1852094490}
   - {fileID: 6931203616668072157}
   - {fileID: 1505746504}
-  pageComplete: {fileID: 449267686}
-  pauseMenuUI: {fileID: 1017970027}
-  winScreen: {fileID: 738662985}
-  tester: 0
+  colorParticles: {fileID: 3864437498301098055}
 --- !u!4 &1605678165
 Transform:
   m_ObjectHideFlags: 0
@@ -5325,100 +5325,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7370796400676993391, guid: 998f353dc8add534386ca98f25098125, type: 3}
   m_PrefabInstance: {fileID: 1936408576}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1965423240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1965423241}
-  - component: {fileID: 1965423242}
-  m_Layer: 0
-  m_Name: AudioManager[Temp]
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1965423241
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965423240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1965423242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965423240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a697530cee2494eb2a1a7157b35d71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Coloring
-    clip: {fileID: 8300000, guid: 08409a51edbb8d741afd40b31315185e, type: 3}
-    volume: 0.75
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Heavy Rain
-    clip: {fileID: 8300000, guid: 374744c0c73f37f468b96d24b7361a59, type: 3}
-    volume: 0.2
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: BYS Melancholy
-    clip: {fileID: 8300000, guid: 74505ba019c9390409a73c4880810d7c, type: 3}
-    volume: 0.4
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: First Color
-    clip: {fileID: 8300000, guid: 31402b591a6177349b1406d956fba249, type: 3}
-    volume: 0.8
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Light Rain
-    clip: {fileID: 8300000, guid: b01b5a7147de5124d8fa87b765ba6e1c, type: 3}
-    volume: 0.2
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Humming
-    clip: {fileID: 8300000, guid: 3b9f27477504a114aa4ce31c7d16dbed, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Paint Select
-    clip: {fileID: 8300000, guid: 266abbadd97c3b2479174f645136419c, type: 3}
-    volume: 0.75
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Shapes Colored
-    clip: {fileID: 8300000, guid: 046c6a9ed7b35c94abfeabf664d96450, type: 3}
-    volume: 0.75
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  mix: {fileID: 24300002, guid: 2b48ca588a80c164fa808dee6c854657, type: 2}
 --- !u!1001 &1971192696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5864,7 +5770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3012168613756996491, guid: d47444bd617125d4d95380f00bd0e8cf, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3012168613756996491, guid: d47444bd617125d4d95380f00bd0e8cf, type: 3}
       propertyPath: m_LocalScale.x
@@ -5933,7 +5839,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6957085503003791914, guid: 39cd2f8f7274f1a469f5b8f7bf4785df, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6957085503003791914, guid: 39cd2f8f7274f1a469f5b8f7bf4785df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5981,6 +5887,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39cd2f8f7274f1a469f5b8f7bf4785df, type: 3}
+--- !u!198 &3864437498301098055 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5175299434548584936, guid: 39cd2f8f7274f1a469f5b8f7bf4785df, type: 3}
+  m_PrefabInstance: {fileID: 3864437498301098054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4159107432571884715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6451,7 +6362,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7005852792499483835, guid: dc0555cfc83f0824eb5069f9883f77aa, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7005852792499483835, guid: dc0555cfc83f0824eb5069f9883f77aa, type: 3}
       propertyPath: m_LocalPosition.x

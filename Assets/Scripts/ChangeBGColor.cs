@@ -30,7 +30,7 @@ public class ChangeBGColor : MonoBehaviour
                 colorChange = true;
                 break;
             default:
-                Camera.main.backgroundColor = color1;
+                Camera.main.backgroundColor = color2;
                 break;
         }
 
