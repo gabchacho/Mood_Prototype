@@ -22,21 +22,45 @@ public class Stamp : MonoBehaviour
         spriteRenderer.color = inactiveCol;
     }
 
-    private void OnMouseDown()
+    private void Update()
     {
-        if (!active)
+        if (GameManager.instance.GetLevelComplete()) 
         {
-            active = true;
-            GameManager.instance.SetStamp(gameObject);
             spriteRenderer.color = activeCol;
         }
-        else 
+    }
+
+    private void OnMouseDown()
+    {
+        if (GameManager.instance.GetLevelComplete())
         {
-            GameManager.instance.ResumeGame();
-            active = false;
-            GameManager.instance.SetStamp(null);
-            spriteRenderer.color = inactiveCol;
+            if (!active)
+            {
+                active = true;
+                GameManager.instance.SetFinishedColoringPanel(true);
+                GameManager.instance.SetStamp(gameObject);
+            }
+            else 
+            {
+                GameManager.instance.SetFinishedColoringPanel(false);
+                active = false;
+                GameManager.instance.SetStamp(null);
+            }
+
+
+            /*if (!active)
+            {
+                active = true;
+                GameManager.instance.SetStamp(gameObject);
+                spriteRenderer.color = activeCol;
+            }
+            else
+            {
+                GameManager.instance.ResumeGame();
+                active = false;
+                GameManager.instance.SetStamp(null);
+                spriteRenderer.color = inactiveCol;
+            }*/
         }
-        
     }
 }

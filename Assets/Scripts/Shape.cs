@@ -74,7 +74,7 @@ public class Shape : MonoBehaviour
         if (!colored)
         {
             colored = true;
-            GameManager.instance.setShapeCount();
+            GameManager.instance.SetShapeCount();
         }
 
         if (!AudioManager.instance.CheckPlaying("Coloring"))

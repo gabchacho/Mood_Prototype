@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     //GENERAL VARIABLES
     public ParticleSystem pageComplete;
     public static GameManager instance;
-    private bool endGame = false;
+    //private bool endGame = false;
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject winScreen;
     
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     //SHAPE VARIABLES
     public List<GameObject> allShapes;
     private int shapeCount = 0;
-    public void setShapeCount() { shapeCount++; }
+    public void SetShapeCount() { shapeCount++; }
 
     //PAUSE VARIABLES
     private bool isPaused = false;
@@ -46,6 +46,13 @@ public class GameManager : MonoBehaviour
     //PARTICLES VARIABLES
     public ParticleSystem colorParticles;
     public ParticleSystem GetColorParticles() { return colorParticles; }
+
+    //LEVEL COMPLETE VARIABLES
+    private bool levelComplete = false;
+    public void SetLevelComplete() { levelComplete = true; }
+    public bool GetLevelComplete() { return levelComplete; }
+    public GameObject finishedColoringPanel;
+    public void SetFinishedColoringPanel(bool finish) { finishedColoringPanel.SetActive(finish); }
 
     //public bool tester = false;
     private void Awake()
@@ -77,6 +84,7 @@ public class GameManager : MonoBehaviour
 
         pauseMenuUI.SetActive(false);
         winScreen.SetActive(false);
+        finishedColoringPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -121,23 +129,24 @@ public class GameManager : MonoBehaviour
             }*/
         }
 
-        if ((shapeCount == allShapes.Count && !endGame)) 
+        if ((shapeCount == allShapes.Count && !levelComplete)) 
         {
-            endGame = true;
+            levelComplete = true;
 
-            EndGame();
+            EndLevel();
         }
 
         if (currStamp != null) 
         {
-            PauseGame(); //note maybe better not to pause since it pauses the particle system, too
+            finishedColoringPanel.SetActive(true);
+            //PauseGame(); //note maybe better not to pause since it pauses the particle system, too
 
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
 
 
             //TODO: check if the mouseposition is outside certain bounds... if it isn't, stamp CAN be placed
-            Debug.Log(mousePosition);
+            //Debug.Log(mousePosition);
 
             //TODO: MAKE STAMPING WORK ONLY AFTER ALL SHAPES ARE COLORED IN...
 
@@ -187,21 +196,24 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void EndGame() 
+    public void EndLevel() 
     {
-        if (!AudioManager.instance.CheckPlaying("Shapes Colored")) 
+        //TODO: FIND DIFFERENT SFX FOR THE END LEVEL
+        /*if (!AudioManager.instance.CheckPlaying("Shapes Colored")) 
         {
             AudioManager.instance.Play("Shapes Colored");
-        }
+        }*/
 
-        if (!sceneName.Equals("Title_Screen")) 
+
+        //TODO: ANIMATE PAGE COMPLETE BUTTON
+        /*if (!sceneName.Equals("Title_Screen")) 
         {
             winScreen.SetActive(true);
 
             winScreen.gameObject.GetComponent<Animator>().SetTrigger("Painting_Complete");
-        }
+        }*/
 
-        StartCoroutine(LoadNextLevel());
+        //StartCoroutine(LoadNextLevel());
     }
     public void SpawnFirework() 
     {
