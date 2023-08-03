@@ -1318,6 +1318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1111094852846949554, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1111094852846949566, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1430,8 +1434,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1605678164}
+    - target: {fileID: 7663305155422661483, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663305155422661483, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290117536
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
+--- !u!1 &1111094852122906599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1334085253379965359, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
+  m_PrefabInstance: {fileID: 1111094852122906598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1636447751899458755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3719,6 +3736,10 @@ PrefabInstance:
       propertyPath: colorParticles
       value: 
       objectReference: {fileID: 535951420}
+    - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
+      propertyPath: completeButton
+      value: 
+      objectReference: {fileID: 1111094852122906599}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: finishedColoringPanel
       value: 

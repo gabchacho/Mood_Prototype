@@ -135,6 +135,8 @@ public class GameManager : MonoBehaviour
         {
             levelComplete = true;
             completeButton.SetActive(true);
+
+            AudioManager.instance.Play("Page Complete");
         }
 
         if (currStamp != null) 
@@ -162,6 +164,11 @@ public class GameManager : MonoBehaviour
                     newStamp.gameObject.GetComponent<Collider2D>().enabled = false;
                     newStamp.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
                     newStamp.transform.position = mousePosition;
+
+                    if (!AudioManager.instance.CheckPlaying("Stamp Place"))
+                    {
+                        AudioManager.instance.Play("Stamp Place");
+                    }
                 }
             }
 
@@ -255,8 +262,19 @@ public class GameManager : MonoBehaviour
                 break;
             case "Second_Page":
                 currScene = 2;
+                currSong = "By Your Side";
+                break;
+            case "Third_Page":
+                currScene = 3;
                 currSong = "BYS Melancholy";
-                //AudioManager.instance.FadeIn("Heavy Rain");
+                break;
+            case "Fourth_Page":
+                currScene = 4;
+                currSong = "Fourth Page Music";
+                break;
+            case "Fifth_Page":
+                currScene = 5;
+                //currSong = "BYS Melancholy";
                 break;
             default:
                 return;
