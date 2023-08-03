@@ -59,6 +59,9 @@ TagManager:
   - name: Top
     uniqueID: 950034339
     locked: 0
+  - name: FinishedColoringPanel
+    uniqueID: 1586342765
+    locked: 0
   - name: Stamp
     uniqueID: 2004382437
     locked: 0

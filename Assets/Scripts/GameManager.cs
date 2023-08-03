@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //GENERAL VARIABLES
-    public ParticleSystem pageComplete;
+    public ParticleSystem completeParticles;
     public static GameManager instance;
     //private bool endGame = false;
     [SerializeField] private GameObject pauseMenuUI;
@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     public bool GetLevelComplete() { return levelComplete; }
     public GameObject finishedColoringPanel;
     public void SetFinishedColoringPanel(bool finish) { finishedColoringPanel.SetActive(finish); }
+    public GameObject completeButton;
 
     //public bool tester = false;
     private void Awake()
@@ -85,6 +86,7 @@ public class GameManager : MonoBehaviour
         pauseMenuUI.SetActive(false);
         winScreen.SetActive(false);
         finishedColoringPanel.SetActive(false);
+        completeButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -132,8 +134,7 @@ public class GameManager : MonoBehaviour
         if ((shapeCount == allShapes.Count && !levelComplete)) 
         {
             levelComplete = true;
-
-            EndLevel();
+            completeButton.SetActive(true);
         }
 
         if (currStamp != null) 
@@ -213,11 +214,11 @@ public class GameManager : MonoBehaviour
             winScreen.gameObject.GetComponent<Animator>().SetTrigger("Painting_Complete");
         }*/
 
-        //StartCoroutine(LoadNextLevel());
+        StartCoroutine(LoadNextLevel());
     }
     public void SpawnFirework() 
     {
-        pageComplete.Play();
+        completeParticles.Play();
     }
 
     public IEnumerator LoadNextLevel() 
