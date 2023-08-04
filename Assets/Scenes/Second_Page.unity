@@ -381,6 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1 &190094082 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2595291844991816943, guid: 1752b13ac8d8040448c38808bc723c9a, type: 3}
@@ -462,6 +463,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
+--- !u!95 &190094088
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190094082}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca52e8a5ec3555b4685957925d236ccf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &209791718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5302573241516585830, guid: e270e2e7cea55364eaae0d2d4fb6c829, type: 3}
@@ -643,6 +665,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
+--- !u!95 &209791723
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209791718}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4761a77f7918ed342ab88fecc10988b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &289750293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3261261380073887148, guid: b20b2821bc56e574791752835ef9907a, type: 3}
@@ -747,6 +790,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
+--- !u!95 &289750298
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289750293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8b4fa717adf9e94494f928f07cadb34, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &352134593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1093,6 +1157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1 &439857736 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4898159415650168695, guid: f60f282e7e2ec2b49b2c05defd3bb64f, type: 3}
@@ -1213,6 +1278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!198 &449267686 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1799492772956630992, guid: d47444bd617125d4d95380f00bd0e8cf, type: 3}
@@ -1403,6 +1469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,6 +1694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1 &595300706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4802700873922450002, guid: 515ca8c9f196a8549892b6c5f7243e01, type: 3}
@@ -1828,6 +1896,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
+--- !u!95 &595300711
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595300706}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7ca2ff19db41494db05c4c9b8fe1da9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &719262469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8645362413420163004, guid: 237b9f4791f1a50439c7758a6e5e95ce, type: 3}
@@ -2482,6 +2571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1 &752936577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7758496784700769031, guid: d1b05733860727c4e8cdb1d44671f5cd, type: 3}
@@ -2541,6 +2631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1001 &802582089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2555,6 +2646,10 @@ PrefabInstance:
     - target: {fileID: 1111094852846949554, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111094852846949554, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1111094852846949566, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_Pivot.x
@@ -2992,6 +3087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1 &1705258289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1334085253379965359, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
@@ -3234,6 +3330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1 &1732129731 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8965292471940270597, guid: fc432d328a92a0a47bb798666d740bd9, type: 3}
@@ -3394,6 +3491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1 &1806786468 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5595287723408089595, guid: 267ba045cce979e40b05a93cebaed19c, type: 3}
@@ -3496,6 +3594,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
+--- !u!95 &1960573840
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960573835}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24ea053c60c33b64e8c380125c21dc88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2074822557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7713573454192249461, guid: 1a87a644ae032454eb1c6403fea26e92, type: 3}
@@ -3956,6 +4075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1 &2089947796 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6137900004550856801, guid: a1daf2279d1348144a840bd4f99d6a50, type: 3}
@@ -4076,6 +4196,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
+--- !u!95 &2089947801
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089947796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b884f12ee17ad194eb07121db288e4ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2103728718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6632797751397322830, guid: 9399e3f26d2efe045a42066355685ae7, type: 3}
@@ -4158,6 +4299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorParticles: {fileID: 0}
+  plantMoving: {fileID: 0}
 --- !u!1001 &314315698503259525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4384,6 +4526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: child_cap
       objectReference: {fileID: 0}
+    - target: {fileID: 2595291844991816943, guid: 1752b13ac8d8040448c38808bc723c9a, type: 3}
+      propertyPath: m_TagString
+      value: Child_Cap
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1752b13ac8d8040448c38808bc723c9a, type: 3}
 --- !u!1001 &3261261379793070265
@@ -4396,6 +4542,10 @@ PrefabInstance:
     - target: {fileID: 3261261380073887148, guid: b20b2821bc56e574791752835ef9907a, type: 3}
       propertyPath: m_Name
       value: watercan
+      objectReference: {fileID: 0}
+    - target: {fileID: 3261261380073887148, guid: b20b2821bc56e574791752835ef9907a, type: 3}
+      propertyPath: m_TagString
+      value: Water_Can
       objectReference: {fileID: 0}
     - target: {fileID: 3261261380073887150, guid: b20b2821bc56e574791752835ef9907a, type: 3}
       propertyPath: m_RootOrder
@@ -4755,6 +4905,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: mom_skin
       objectReference: {fileID: 0}
+    - target: {fileID: 4802700873922450002, guid: 515ca8c9f196a8549892b6c5f7243e01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802700873922450002, guid: 515ca8c9f196a8549892b6c5f7243e01, type: 3}
+      propertyPath: m_TagString
+      value: Mom_Skin
+      objectReference: {fileID: 0}
     - target: {fileID: 4802700873922450004, guid: 515ca8c9f196a8549892b6c5f7243e01, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -4983,6 +5141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: child_skin
       objectReference: {fileID: 0}
+    - target: {fileID: 5302573241516585830, guid: e270e2e7cea55364eaae0d2d4fb6c829, type: 3}
+      propertyPath: m_TagString
+      value: Child_Hands
+      objectReference: {fileID: 0}
     - target: {fileID: 5302573241516585832, guid: e270e2e7cea55364eaae0d2d4fb6c829, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -5039,6 +5201,10 @@ PrefabInstance:
     - target: {fileID: 6137900004550856801, guid: a1daf2279d1348144a840bd4f99d6a50, type: 3}
       propertyPath: m_Name
       value: mom_hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137900004550856801, guid: a1daf2279d1348144a840bd4f99d6a50, type: 3}
+      propertyPath: m_TagString
+      value: Mom_Hair
       objectReference: {fileID: 0}
     - target: {fileID: 6137900004550856803, guid: a1daf2279d1348144a840bd4f99d6a50, type: 3}
       propertyPath: m_RootOrder
@@ -5153,6 +5319,18 @@ PrefabInstance:
     - target: {fileID: 6632797751397322830, guid: 9399e3f26d2efe045a42066355685ae7, type: 3}
       propertyPath: m_Name
       value: water
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632797751397322831, guid: 9399e3f26d2efe045a42066355685ae7, type: 3}
+      propertyPath: m_Color.b
+      value: 0.103773594
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632797751397322831, guid: 9399e3f26d2efe045a42066355685ae7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.103773594
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632797751397322831, guid: 9399e3f26d2efe045a42066355685ae7, type: 3}
+      propertyPath: m_Color.r
+      value: 0.103773594
       objectReference: {fileID: 0}
     - target: {fileID: 6632797751397322832, guid: 9399e3f26d2efe045a42066355685ae7, type: 3}
       propertyPath: m_RootOrder
@@ -5371,15 +5549,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7758496784700769033, guid: d1b05733860727c4e8cdb1d44671f5cd, type: 3}
       propertyPath: m_Color.b
-      value: 0.92074585
+      value: 0.23584908
       objectReference: {fileID: 0}
     - target: {fileID: 7758496784700769033, guid: d1b05733860727c4e8cdb1d44671f5cd, type: 3}
       propertyPath: m_Color.g
-      value: 0.92074585
+      value: 0.23584908
       objectReference: {fileID: 0}
     - target: {fileID: 7758496784700769033, guid: d1b05733860727c4e8cdb1d44671f5cd, type: 3}
       propertyPath: m_Color.r
-      value: 0.9339623
+      value: 0.23584908
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1b05733860727c4e8cdb1d44671f5cd, type: 3}
@@ -5412,19 +5590,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958523441383382904, guid: f212bbeece836ee4b856f59a6cc65006, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7958523441383382904, guid: f212bbeece836ee4b856f59a6cc65006, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7958523441383382904, guid: f212bbeece836ee4b856f59a6cc65006, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7958523441383382904, guid: f212bbeece836ee4b856f59a6cc65006, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7958523441383382904, guid: f212bbeece836ee4b856f59a6cc65006, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -5432,11 +5610,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958523441383382904, guid: f212bbeece836ee4b856f59a6cc65006, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7958523441383382910, guid: f212bbeece836ee4b856f59a6cc65006, type: 3}
       propertyPath: m_Name
       value: child_hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958523441383382910, guid: f212bbeece836ee4b856f59a6cc65006, type: 3}
+      propertyPath: m_TagString
+      value: Child_Hair
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f212bbeece836ee4b856f59a6cc65006, type: 3}

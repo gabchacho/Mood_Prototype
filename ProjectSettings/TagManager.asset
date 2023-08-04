@@ -4,18 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Scribble
-  - Flower
-  - Puff
-  - Sun
-  - Leaf
   - Fruit
   - Window
-  - House
-  - ChimneyTop
-  - TreeTrunk
-  - Swing
-  - Door
+  - Puff
+  - Flower
+  - Plant
+  - Mom_Hands
+  - Baby_Hands
+  - Mom_Shirt
+  - Child_Hands
+  - Child_Hair
+  - Mom_Hair
+  - Mom_Skin
+  - Water_Can
+  - Child_Cap
   layers:
   - Default
   - TransparentFX

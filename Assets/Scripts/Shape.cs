@@ -14,6 +14,9 @@ public class Shape : MonoBehaviour
 
     private Animator anim;
 
+    //public Material plantDefault;
+    public Material plantMoving;
+
     private void Start()
     {
         
@@ -69,6 +72,8 @@ public class Shape : MonoBehaviour
 
     private void ColorIn() 
     {
+        
+        
         AudioManager.instance.Play("First Color");
 
         if (!colored)
@@ -97,6 +102,11 @@ public class Shape : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = GameManager.instance.GetColor();
         }
+
+        /*if (gameObject.tag == "Plant")
+        {
+            gameObject.GetComponent<SpriteRenderer>().material = plantMoving;
+        }*/
 
         colorParticles.Play();
         colorParticles.gameObject.transform.position = transform.position;
