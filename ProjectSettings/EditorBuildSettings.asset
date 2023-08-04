@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fourth_Page.unity
     guid: e4bf9ff9fab684646ab2d8b8e22e3ccf
+  - enabled: 1
+    path: Assets/Scenes/Fifth_Page.unity
+    guid: e8d978aca510d5e4cbfd30815c989b27
+  - enabled: 1
+    path: Assets/Scenes/End_Screen.unity
+    guid: f068b53427330a34b881846f1bd227a6
   m_configObjects: {}

@@ -10,6 +10,7 @@ public class Stamp : MonoBehaviour
 
 
     private bool active = false;
+    private Vector3 origScale;
 
     Color inactiveCol = new Color(1f, 1f, 1f, .5f);
     Color activeCol = new Color(1f, 1f, 1f, 1f);
@@ -20,6 +21,7 @@ public class Stamp : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();    
         spriteRenderer.color = inactiveCol;
+        origScale = transform.localScale;
     }
 
     private void Update()
@@ -37,30 +39,17 @@ public class Stamp : MonoBehaviour
             if (!active)
             {
                 active = true;
+                transform.localScale += new Vector3(0.1f, 0.1f, 0);
                 GameManager.instance.SetFinishedColoringPanel(true);
                 GameManager.instance.SetStamp(gameObject);
             }
             else 
             {
+                active = false;
+                transform.localScale = origScale;
                 GameManager.instance.SetFinishedColoringPanel(false);
-                active = false;
                 GameManager.instance.SetStamp(null);
             }
-
-
-            /*if (!active)
-            {
-                active = true;
-                GameManager.instance.SetStamp(gameObject);
-                spriteRenderer.color = activeCol;
-            }
-            else
-            {
-                GameManager.instance.ResumeGame();
-                active = false;
-                GameManager.instance.SetStamp(null);
-                spriteRenderer.color = inactiveCol;
-            }*/
         }
     }
 }

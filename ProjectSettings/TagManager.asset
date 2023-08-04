@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fruit
   - Window
   - Puff
   - Flower
@@ -18,6 +17,23 @@ TagManager:
   - Mom_Skin
   - Water_Can
   - Child_Cap
+  - Cloud
+  - Bird
+  - Inner_Sun
+  - Outer_Sun
+  - Flower_Field
+  - Sister_Hair
+  - Sister_Shirt
+  - Brother_Hair
+  - Brother_Shirt
+  - Baby_Blanket
+  - Mom_Hands2
+  - Child_Hand2
+  - Mom_Face2
+  - Child_Face2
+  - Child_Hair2
+  - Tulip2
+  - Stem2
   layers:
   - Default
   - TransparentFX

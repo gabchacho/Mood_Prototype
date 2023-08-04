@@ -114,23 +114,6 @@ public class GameManager : MonoBehaviour
             backGroundColor = true;
         }
 
-        if (shapeCount >= allShapes.Count / 1.3) 
-        {
-
-            /*AudioManager.instance.FadeOut("Heavy Rain");
-            AudioManager.instance.FadeOut("Sad Music");
-
-            if (!AudioManager.instance.CheckPlaying("Light Rain")) 
-            {
-                AudioManager.instance.FadeIn("Light Rain");
-            }
-
-            if (!AudioManager.instance.CheckPlaying("Humming"))
-            {
-                AudioManager.instance.FadeIn("Humming");
-            }*/
-        }
-
         if ((shapeCount == allShapes.Count && !levelComplete)) 
         {
             levelComplete = true;
@@ -142,16 +125,9 @@ public class GameManager : MonoBehaviour
         if (currStamp != null) 
         {
             finishedColoringPanel.SetActive(true);
-            //PauseGame(); //note maybe better not to pause since it pauses the particle system, too
 
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-
-
-            //TODO: check if the mouseposition is outside certain bounds... if it isn't, stamp CAN be placed
-            //Debug.Log(mousePosition);
-
-            //TODO: MAKE STAMPING WORK ONLY AFTER ALL SHAPES ARE COLORED IN...
 
             if (mousePosition.x < -6 || mousePosition.x > 6 || mousePosition.y < -3 || mousePosition.y > 3)
             {
@@ -206,20 +182,7 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel() 
     {
-        //TODO: FIND DIFFERENT SFX FOR THE END LEVEL
-        /*if (!AudioManager.instance.CheckPlaying("Shapes Colored")) 
-        {
-            AudioManager.instance.Play("Shapes Colored");
-        }*/
-
-
-        //TODO: ANIMATE PAGE COMPLETE BUTTON
-        /*if (!sceneName.Equals("Title_Screen")) 
-        {
-            winScreen.SetActive(true);
-
-            winScreen.gameObject.GetComponent<Animator>().SetTrigger("Painting_Complete");
-        }*/
+        AudioManager.instance.Play("Select");
 
         StartCoroutine(LoadNextLevel());
     }
@@ -258,7 +221,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "First_Page":
                 currScene = 1;
-                currSong = "By Your Side";
+                currSong = "First Page Music";
                 break;
             case "Second_Page":
                 currScene = 2;
@@ -274,7 +237,11 @@ public class GameManager : MonoBehaviour
                 break;
             case "Fifth_Page":
                 currScene = 5;
-                //currSong = "BYS Melancholy";
+                currSong = "Fifth Page Music";
+                break;
+            case "End_Screen":
+                currSong = "Title";
+                sfx1 = "Cicadas";
                 break;
             default:
                 return;

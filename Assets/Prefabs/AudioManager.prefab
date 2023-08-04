@@ -119,7 +119,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Stamp Place
     clip: {fileID: 8300000, guid: e29c7d7d983a4584f999ca23cdc3d45f, type: 3}
-    volume: 0.2
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Fifth Page Music
+    clip: {fileID: 8300000, guid: 86d7b09d653efdc4fa08ac318651c420, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: First Page Music
+    clip: {fileID: 8300000, guid: 1054ca55af0679c478a33e9eb6b20070, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Select
+    clip: {fileID: 8300000, guid: 468b342e67e53df41876beb27418ca4e, type: 3}
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
