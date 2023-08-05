@@ -7,7 +7,7 @@ public class ChangeBGColor : MonoBehaviour
     float duration;
 
     float t = 0f;
-    Color gray, blue, oldColor, newColor;
+    Color gray, blue, green, oldColor, newColor;
     private bool colorChange = false;
     //[SerializeField] float r, g, b, a;
 
@@ -15,6 +15,7 @@ public class ChangeBGColor : MonoBehaviour
     {
         gray = new Color(0.5f, 0.5f, 0.5f, 1);
         blue = new Color(0, 0.8f, 0.9f, 0);
+        green = new Color(0, 0.6f, 0, 0.7f);
 
         switch (GameManager.instance.GetSceneName())
         {
@@ -24,7 +25,7 @@ public class ChangeBGColor : MonoBehaviour
             case "Second_Page":
                 Camera.main.backgroundColor = blue;
                 oldColor = blue;
-                newColor = Color.green;
+                newColor = green;
                 colorChange = true;
                 break;
             case "Third_Page":
@@ -33,11 +34,11 @@ public class ChangeBGColor : MonoBehaviour
             case "Fourth_Page":
                 Camera.main.backgroundColor = gray;
                 oldColor = gray;
-                newColor = Color.green;
+                newColor = green;
                 colorChange = true;
                 break;
             case "Fifth_Page":
-                Camera.main.backgroundColor = Color.green;
+                Camera.main.backgroundColor = green;
                 break;
             default:
                 Camera.main.backgroundColor = blue;

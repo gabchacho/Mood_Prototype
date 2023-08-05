@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     
     //SOUND VARIABLES
     private string currSong;
-    private string sfx1;
+    private string sfx;
 
     //COLOR VARIABLES
     private Color color = Color.gray;
@@ -78,9 +78,9 @@ public class GameManager : MonoBehaviour
         ChooseSong();
         AudioManager.instance.FadeIn(currSong);
 
-        if (sfx1 != null) 
+        if (sfx != null) 
         {
-            AudioManager.instance.FadeIn(sfx1);
+            AudioManager.instance.FadeIn(sfx);
         }
 
         pauseMenuUI.SetActive(false);
@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour
     public void Reset()
     {
         ResumeGame();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Title_Screen");
     }
 
     public void Quit()
@@ -202,9 +202,9 @@ public class GameManager : MonoBehaviour
             AudioManager.instance.FadeOut(currSong);
         }
 
-        if (AudioManager.instance.CheckPlaying(sfx1))
+        if (AudioManager.instance.CheckPlaying(sfx))
         {
-            AudioManager.instance.FadeOut(sfx1);
+            AudioManager.instance.FadeOut(sfx);
         }
 
         SceneManager.LoadScene(currScene);
@@ -217,32 +217,36 @@ public class GameManager : MonoBehaviour
             case "Title_Screen":
                 currScene = 0;
                 currSong = "Title";
-                sfx1 = "Cicadas";
+                sfx = "Cicadas";
                 break;
             case "First_Page":
                 currScene = 1;
                 currSong = "First Page Music";
+                sfx = "Humming";
                 break;
             case "Second_Page":
                 currScene = 2;
                 currSong = "By Your Side";
+                sfx = "Garden";
                 break;
             case "Third_Page":
                 currScene = 3;
                 currSong = "BYS Melancholy";
-                sfx1 = "Heavy Rain";
+                sfx = "Heavy Rain";
                 break;
             case "Fourth_Page":
                 currScene = 4;
                 currSong = "Fourth Page Music";
+                sfx = "Wheat Wind";
                 break;
             case "Fifth_Page":
                 currScene = 5;
                 currSong = "Fifth Page Music";
+                sfx = "Family Ambience";
                 break;
             case "End_Screen":
                 currSong = "Title";
-                sfx1 = "Cicadas";
+                sfx = "Cicadas";
                 break;
             default:
                 return;

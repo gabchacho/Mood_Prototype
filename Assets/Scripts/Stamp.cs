@@ -12,7 +12,7 @@ public class Stamp : MonoBehaviour
     private bool active = false;
     private Vector3 origScale;
 
-    Color inactiveCol = new Color(1f, 1f, 1f, .5f);
+    Color inactiveCol = new Color(1f, 1f, 1f, 0);
     Color activeCol = new Color(1f, 1f, 1f, 1f);
     private SpriteRenderer spriteRenderer;
 

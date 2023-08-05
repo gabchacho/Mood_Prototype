@@ -2207,6 +2207,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1111094852842250408, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 82303043}
     - target: {fileID: 1111094852846949553, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2217,7 +2221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1111094852846949554, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1111094852846949566, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_Pivot.x
@@ -2305,23 +2309,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1111094852855447056, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1111094852855447056, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111094852866434326, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 82303043}
+    - target: {fileID: 1111094852866434326, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 1111094852982976989, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1111094852982976989, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1111094852982976989, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2322902380276617572, guid: 4c0008b4c63917e41a05d5489c5e74b8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2417,7 +2429,7 @@ PrefabInstance:
       objectReference: {fileID: 449267686}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.size
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: finishedColoringPanel
@@ -2458,43 +2470,43 @@ PrefabInstance:
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[8]
       value: 
-      objectReference: {fileID: 1983404314}
+      objectReference: {fileID: 1886358024}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[9]
       value: 
-      objectReference: {fileID: 1886358024}
+      objectReference: {fileID: 994500439}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[10]
       value: 
-      objectReference: {fileID: 994500439}
+      objectReference: {fileID: 582115426}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[11]
       value: 
-      objectReference: {fileID: 582115426}
+      objectReference: {fileID: 787813523}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[12]
       value: 
-      objectReference: {fileID: 787813523}
+      objectReference: {fileID: 2066094231}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[13]
       value: 
-      objectReference: {fileID: 2066094231}
+      objectReference: {fileID: 2057072165}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[14]
       value: 
-      objectReference: {fileID: 2057072165}
+      objectReference: {fileID: 1415250437}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[15]
       value: 
-      objectReference: {fileID: 1415250437}
+      objectReference: {fileID: 476659189}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[16]
       value: 
-      objectReference: {fileID: 476659189}
+      objectReference: {fileID: 1407863347}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[17]
       value: 
-      objectReference: {fileID: 1407863347}
+      objectReference: {fileID: 752936577}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[18]
       value: 
@@ -4959,6 +4971,10 @@ PrefabInstance:
     - target: {fileID: 1801485251215730503, guid: ed40850b622165348800d5e975cb41de, type: 3}
       propertyPath: m_Name
       value: dirt_top
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801485251215730503, guid: ed40850b622165348800d5e975cb41de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7756841919837299160, guid: ed40850b622165348800d5e975cb41de, type: 3}
       propertyPath: m_RootOrder

@@ -4224,7 +4224,7 @@ PrefabInstance:
       objectReference: {fileID: 1111094852122906599}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.size
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: finishedColoringPanel
@@ -4333,7 +4333,7 @@ PrefabInstance:
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[25]
       value: 
-      objectReference: {fileID: 1864845711}
+      objectReference: {fileID: 1281316007}
     - target: {fileID: 3254142618618356624, guid: 9033c17b7272e1a4ca50c0f121961945, type: 3}
       propertyPath: allShapes.Array.data[26]
       value: 
@@ -4541,6 +4541,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1435351225}
     m_Modifications:
+    - target: {fileID: 542824575630249337, guid: 1ce65f54659b54f42902776d0f5d1e15, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4731705700181230543, guid: 1ce65f54659b54f42902776d0f5d1e15, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -5830,6 +5834,10 @@ PrefabInstance:
     - target: {fileID: 2703309279468116151, guid: ceb2535d70cf06f4a9049e1cb55653ea, type: 3}
       propertyPath: m_TagString
       value: Mom_Hands2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451427363308473622, guid: ceb2535d70cf06f4a9049e1cb55653ea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb2535d70cf06f4a9049e1cb55653ea, type: 3}
