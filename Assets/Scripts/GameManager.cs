@@ -230,6 +230,7 @@ public class GameManager : MonoBehaviour
             case "Third_Page":
                 currScene = 3;
                 currSong = "BYS Melancholy";
+                sfx1 = "Heavy Rain";
                 break;
             case "Fourth_Page":
                 currScene = 4;

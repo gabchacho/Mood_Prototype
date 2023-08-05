@@ -108,6 +108,7 @@ public class Shape : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().material = plantMoving;
         }*/
 
+        //colorParticles.GetComponent<Renderer>().sortingLayerName = "Particle";
         colorParticles.Play();
         colorParticles.gameObject.transform.position = transform.position;
     }

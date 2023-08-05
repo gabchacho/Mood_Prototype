@@ -53,7 +53,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Heavy Rain
     clip: {fileID: 8300000, guid: 374744c0c73f37f468b96d24b7361a59, type: 3}
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
